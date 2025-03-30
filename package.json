@@ -1,0 +1,33 @@
+{
+  "name": "mcp-memory-server",
+  "version": "1.0.0",
+  "description": "Standalone MCP server for enabling memory for Claude through a knowledge graph",
+  "license": "MIT",
+  "author": "Anthropic, PBC (https://anthropic.com)",
+  "homepage": "https://github.com/s2005/mcp-memory-server",
+  "bugs": "https://github.com/s2005/mcp-memory-server/issues",
+  "type": "module",
+  "bin": {
+    "mcp-memory-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s2005/mcp-memory-server.git"
+  }
+}
